@@ -1,6 +1,6 @@
 # OCR-D extension to recognize text using LightOnOCR models
 
-> ocrd_lightonocr_recognizer is an OCR‑D module that tries to recognize text using LightOnOCR models.
+> ocrd_lightonocr is an OCR‑D module that tries to recognize text using LightOnOCR models.
        
 _Disclaimer_: Work in progeress
 
