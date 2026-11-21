@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel", "setuptools-ocrd"]
+
+[project]
+name = "ocrd_lightonocr_recognizer"
+authors = [
+    {name = "Constantin Lehenmeier", email = "constantin.lehenmeier@ur.de"}
+]
+description = "Use LightOnOCR models within the OCR-D framework"
+readme = "README.md"
+license-files = [
+    "LICENSE",
+]
+requires-python = ">=3.8"
+keywords = ["ocr", "ocr-d", "lightonocr"]
+
+dynamic = ["version", "dependencies", "optional-dependencies"]
+
+# https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Other Audience",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Text Processing",
+]
+
+[project.scripts]
+ocrd-lightonocr-recognizer = "ocrd_lightonocr_recognizer.cli:ocrd_lightonocr_recognizer"
+
+[project.urls]
+Homepage = "https://github.com/CrazyCrud/ocrd_lightonocr_recognizer"
+Repository = "https://github.com/CrazyCrud/ocrd_lightonocr_recognizer.git"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools]
+packages = ["ocrd_lightonocr_recognizer"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+ocrd_lightonocr_recognizer = ["*.json", "ocrd-tool.json"]

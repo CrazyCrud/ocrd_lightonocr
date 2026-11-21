@@ -1,0 +1,5 @@
+ocrd==3.12.3
+ocrd_models==2.60.3
+Pillow==12.2.0
+torch==2.11.0
+transformers==5.7.0

@@ -1,0 +1,33 @@
+{
+  "git_url": "https://github.com/CrazyCrud/ocrd_lightonocr",
+  "version": "0.1.0",
+  "tools": {
+    "ocrd-lightonocr-recognizer": {
+      "executable": "ocrd-lightonocr-recognizer",
+      "input_file_grp_cardinality": 1,
+      "output_file_grp_cardinality": 1,
+      "categories": ["Text recognition and optimization"],
+      "steps": ["recognition/text-recognition"],
+      "description": "Text recognition with LightOnOCR models",
+      "parameters": {
+        "model_id": {
+          "description": "LightOnOCR model to use",
+          "type": "string",
+          "format": "uri",
+          "cacheable": true
+        },
+        "level-of-operation": {
+          "description": "Operate on TextRrgion or TextLine elements",
+          "type": "string",
+          "default": "region",
+          "enum": ["region", "line"]
+        },
+        "device": {
+          "description": "CUDA ID (e.g. 'cuda:0') for computation on GPU (if available), or 'cpu' to run on CPU only",
+          "type": "string",
+          "default": "cuda:0"
+        }
+      }
+    }
+  }
+}
